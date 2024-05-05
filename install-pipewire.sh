@@ -23,9 +23,9 @@ fi
 rm /etc/init.d/pulseaudio-enable-autospawn/*
 
 rmdir /etc/init.d/pulseaudio-enable-autospawn
-
+#intended dest is user home
 mv wire ..
-
+#intended dest is user home /.config/autostart
 mv wire.desktop ../.config/autostart
 
 preferences_file="/etc/apt/preferences.d/pulseaudio-block"
