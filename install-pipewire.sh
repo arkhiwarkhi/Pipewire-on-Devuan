@@ -5,6 +5,9 @@ if [ "$EUID" -ne 0]; then
 	exit 1
 fi
 
+chmod +x wire
+chmod +x wire.desktop
+
 echo "Installing pipewire-audio.."
 
 apt-get install -y "pipewire-audio"
