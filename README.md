@@ -9,7 +9,7 @@ sudo apt-get install pipewire audio
 ```
 git clone https://github.com/arkhiwarkhi/Pipewire-on-Devuan && cd Pipewire-on-Devuan
 ```
-3. Move the "wire" file to the ~/ folder, and wire.desktop to /usr/share/applications. There are other options, like ~/.local/share/applications, or /opt/, but this will require editing wire.desktop.
+3. Move the "wire" file to the ~/ folder, and wire.desktop to /usr/share/applications. There are other options, like ~/.local/share/applications, or /opt/, but this will require editing wire.desktop's Path= entry.
 ```
 mv wire ~/ && sudo mv wire.desktop /usr/share/applications/
 ```
