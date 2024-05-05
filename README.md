@@ -16,3 +16,5 @@ chmod +x install-pipewire.sh
 doas ./install-pipewire.sh
 ```
 4. All done! Reboot if necessary.
+
+**Please note:** This script will permanently block installation of pulseaudio on your system, preventing accidental reinstallation. To revert this, remove /etc/apt/preferences.d/pulseaudio-block.
