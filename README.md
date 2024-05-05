@@ -1,5 +1,5 @@
 # Pipewire on Devuan
-A brief guide to running Pipewire on Devuan due to the lack of much documentation on the topic. This can solve many issues, such as audio devices connecting, but not outputting, on Devuan - and in general, Pipewire is far better than Pulse anyway.
+A script to install Pipewire on Devuan. This can solve many issues, such as audio devices connecting, but not outputting, on Devuan - and in general, Pipewire is far better than Pulse anyway.
 
 This script currently only supports **sysvinit** and **OpenRC**.
 
