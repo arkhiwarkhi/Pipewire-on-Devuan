@@ -16,7 +16,7 @@ mv wire ~/ && sudo mv wire.desktop /usr/share/applications/
 4. Use your desktop environment's preferred method of adding autostart applications. In GNOME, this is under GNOME Tweaks > Startup Applications. In KDE, this is System Settings > Autostart. In xfce, it is xfce4-settings-manager > Application Autostart.
 5. Restarting the session or a reboot may be required, depending.
 
-# Troubleshooting
+## Troubleshooting
 Ensure the pulseaudio-enable-autospawn service is disabled. You can either remove it or for a cleaner method (via SysVInit):
 ```
 update-rc.d -f pulseaudio-enable-autospawn remove
