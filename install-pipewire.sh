@@ -28,7 +28,7 @@ mv wire ..
 
 mv wire.desktop ../.config/autostart
 
-preferences_file="/etc/apt/preferences.d/pulseaudio"
+preferences_file="/etc/apt/preferences.d/pulseaudio-block"
 #permanently block installation of pulseaudio on all release versions.
 
 content="Package: pulseaudio
