@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+wireplumber &
+
+pipewire &
+
+pipewire-pulse &
+
