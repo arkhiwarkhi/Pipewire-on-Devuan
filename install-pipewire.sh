@@ -9,7 +9,7 @@ chmod +x wire
 chmod +x wire.desktop
 
 echo "Installing pipewire-audio.."
-
+apt-get update -y
 apt-get install -y "pipewire-audio"
 
 if [ -x /sbin/openrc ]; then
