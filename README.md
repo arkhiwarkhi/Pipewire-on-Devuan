@@ -3,7 +3,7 @@ A brief guide to running Pipewire on Devuan due to the lack of much documentatio
 
 This script currently only supports **sysvinit** and **OpenRC**.
 
-1.  Clone this repository either by clicking at the top right "Download as Zip" or by following the command below.
+1.  Clone this repository.
 ```
 cd ~/ && git clone https://github.com/arkhiwarkhi/Pipewire-on-Devuan && cd Pipewire-on-Devuan
 ```
