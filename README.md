@@ -1,5 +1,5 @@
 # Pipewire on Devuan
-A brief guide to running Pipewire on Devuan due to the lack of much documentation on the topic.
+A brief guide to running Pipewire on Devuan due to the lack of much documentation on the topic. This can solve many issues, such as audio devices connecting, but not outputting, on Devuan - and in general, Pipewire is far better than Pulse anyway.
 
 1. Install the pipewire-audio metapackage via APT. Once you have done this, you probably shouldn't remove any further pulseaudio packages as APT will take care of the ones that need to be removed.
 ```
