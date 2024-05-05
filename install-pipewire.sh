@@ -28,8 +28,8 @@ mv wire ..
 #intended dest is user home /.config/autostart
 mv wire.desktop ../.config/autostart
 
-preferences_file="/etc/apt/preferences.d/pulseaudio-block"
 #permanently block installation of pulseaudio on all release versions.
+preferences_file="/etc/apt/preferences.d/pulseaudio-block"
 
 content="Package: pulseaudio
 Pin: release o=Devuan
