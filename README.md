@@ -3,7 +3,7 @@ A brief guide to running Pipewire on Devuan due to the lack of much documentatio
 
 1. Install the pipewire-audio metapackage via APT. Once you have done this, you probably shouldn't remove any further pulseaudio packages as APT will take care of the ones that need to be removed.
 ```
-sudo apt-get install pipewire audio
+sudo apt-get install pipewire-audio
 ```
 2.  Clone this repository either by clicking at the top right "Download as Zip" or
 ```
