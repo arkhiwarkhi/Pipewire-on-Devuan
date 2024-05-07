@@ -27,8 +27,20 @@ if [ $chmod_status_wire_script -eq 0 ]; then
       				echo "Installed pipewire successfully! Removing remnant pulseaudio services."
 				if [ -x /sbin/openrc ]; then
     					rc-update del pulseaudio-enable-autospawn
+	 				openrc_status_remove = $?
+      					if [ $openrc_status_remove -eq 0 ]; then
+	   					echo ""
+					else
+     						echo "Could not disable the pulseaudio-enable-autospawn service"
+	   				fi
 	 			elif [ -x /sbin/init ]; then
      					update-rc.d -f pulseaudio-enable-autospawn remove
+	  				sysv_status_remove = $?
+       					if [ $sysv_status_remove -eq 0 ]; then
+	    					echo ""
+	  				else
+       						echo "Could not disable the pulseaudio-enable-autospawn service"
+	     				fi
 	  			else
       					echo "Init system not supported at this time"
 	   				exit
