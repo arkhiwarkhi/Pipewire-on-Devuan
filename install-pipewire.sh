@@ -31,10 +31,10 @@ mv wire.desktop ../.config/autostart
 #permanently block installation of pulseaudio on all release versions.
 preferences_file="/etc/apt/preferences.d/pulseaudio-block"
 
-content="Package: pulseaudio
+block_pulse="Package: pulseaudio
 Pin: release o=Devuan
 Pin-Priority: -10"
 
-echo "$content" | sudo tee "$preferences_file" > /dev/null
+echo "$block_pulse" | sudo tee "$preferences_file" > /dev/null
 
 echo "Finished installing pipewire!"
