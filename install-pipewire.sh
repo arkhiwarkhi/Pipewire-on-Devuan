@@ -63,8 +63,8 @@ if [ $remove_status_autospawn -eq 0 ]; then
 	 		move_status_desktop=$?
     			if [ $move_status_desktop -eq 0 ]; then
 				echo "$block_pulse" | sudo tee "$preferences_file" > /dev/null
-    				block_pulse=$?
-				if [ $block_pulse -eq 0 ]; then
+    				block_status_pulse=$?
+				if [ $block_status_pulse -eq 0 ]; then
     					echo "Pulseaudio has been blocked from installation! All done."
 	 			else
      					echo "Unable to block installation of Pulseaudio."
@@ -78,8 +78,8 @@ if [ $remove_status_autospawn -eq 0 ]; then
     				if [ $move_status_retry_desktop -eq 0 ]; then
 					echo "XDG_CONFIG_HOME found."
      					echo "$block_pulse" | sudo tee "$preferences_file" > /dev/null
-	  				block_pulse = $?
-       					if [ $block_pulse -eq 0 ]; then
+	  				block_status_pulse = $?
+       					if [ $block_status_pulse -eq 0 ]; then
 						echo "Pulseaudio has been blocked from installation! All done."
 	 				else
 						echo "Unable to block installation of Pulseaudio."
