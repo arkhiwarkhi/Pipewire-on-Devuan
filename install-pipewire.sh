@@ -5,13 +5,13 @@ block_pulse="Package: pulseaudio
 Pin: release o=Devuan
 Pin-Priority: -10"
 
-if [ "$EUID" -ne 0]; then
+if [ "$EUID" -ne 0 ]; then
 	echo "Please run this script with sudo, doas, or as root."
 	exit 1
 fi
 
 chmod +x wire
-chmod_status_wire_script = $?
+chmod_status_wire_script=$?
 if [ $chmod_status_wire_script -eq 0 ]; then
 	chmod +x wire.desktop
  	chmod_status_wire_desktop=$?
@@ -27,7 +27,7 @@ if [ $chmod_status_wire_script -eq 0 ]; then
       				echo "Installed pipewire successfully! Removing remnant pulseaudio services."
 				if [ -x /sbin/openrc ]; then
     					rc-update del pulseaudio-enable-autospawn
-	 				openrc_status_remove = $?
+	 				openrc_status_remove=$?
       					if [ $openrc_status_remove -eq 0 ]; then
 	   					echo ""
 					else
@@ -35,7 +35,7 @@ if [ $chmod_status_wire_script -eq 0 ]; then
 	   				fi
 	 			elif [ -x /sbin/init ]; then
      					update-rc.d -f pulseaudio-enable-autospawn remove
-	  				sysv_status_remove = $?
+	  				sysv_status_remove=$?
        					if [ $sysv_status_remove -eq 0 ]; then
 	    					echo ""
 	  				else
@@ -90,7 +90,7 @@ if [ $remove_status_autospawn -eq 0 ]; then
     				if [ $move_status_retry_desktop -eq 0 ]; then
 					echo "XDG_CONFIG_HOME found."
      					echo "$block_pulse" | sudo tee "$preferences_file" > /dev/null
-	  				block_status_pulse = $?
+	  				block_status_pulse=$?
        					if [ $block_status_pulse -eq 0 ]; then
 						echo "Pulseaudio has been blocked from installation! All done."
 	 				else
