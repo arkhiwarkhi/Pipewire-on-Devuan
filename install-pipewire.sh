@@ -19,7 +19,7 @@ if [ $chmod_status_wire_script -eq 0 ]; then
    		echo "Updating repositories..."
      		apt-get update -y
        		apt_status_update=$?
-	 	if [ $apt_get_status_update -eq 0 ]; then
+	 	if [ $apt_status_update -eq 0 ]; then
    			echo "Installing pipewire-audio..."
    			apt-get install -y "pipewire-audio"
 			apt_status_install=$?
