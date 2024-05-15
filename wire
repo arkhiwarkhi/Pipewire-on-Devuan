@@ -1,8 +1,22 @@
 #!/usr/bin/env bash
 
+wp_pid=""
+pw_pid=""
+pp_pid=""
+
+clean_up () {
+	kill $wp_pid
+	kill $pw_pid
+	kill $pp_pid
+}
+
 wireplumber &
+wp_pid=$!
 
 pipewire &
+pw_pid=$!
 
 pipewire-pulse &
+pp_pid=$!
 
+trap 'clean_up' EXIT
